@@ -3,16 +3,17 @@ package com.labs.springgraph.demo.model;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "book")
 public class Book {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "book_title")
     private String bookTitle;
 
     @ManyToOne
-    @JoinColumn(name = "idtutor", nullable = false, updatable = false)
+    @JoinColumn(name = "id_tutor", nullable = false, updatable = false)
     private Tutorial tutorial;
 
     public Book() {

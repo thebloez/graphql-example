@@ -1,0 +1,1 @@
+insert into tutorial(description, title, author_id) values ('ouuhh', 'i love my husband',2);

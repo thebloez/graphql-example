@@ -3,9 +3,10 @@ package com.labs.springgraph.demo.model;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "author")
 public class Author {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "name",nullable = false)
