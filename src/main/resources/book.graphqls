@@ -1,0 +1,11 @@
+type Book {
+    id: ID!
+    bookTitle: String!
+    tutorial: Tutorial
+}
+
+extend type Query {
+    findBookById(id: Long!): Book
+    findBooksByIds(id: [Long]!): [Book]
+    findAllBook: [Book]
+}
